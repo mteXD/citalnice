@@ -6,25 +6,25 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="protislovjeSmall.svg">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="icon" href="{{ url_for('static', filename='images/protislovjeSmall.svg') }}">
 
 	<style>
 		@font-face {
 			font-family: Subtitle-font;
-			src: "SalmaAlfasans-Light.otf";
+			src: url("SalmaAlfasans-Light.otf");
 		  }
 	</style>
 
-	<title>CSS manual</title>
+	<title>Čitalnice</title>
 </head>
 
 <body>
 	<div class="container">
 		<header>
 			<!-- <section></section> -->
-			<img src="protislovjeLong.svg" alt="">
-			<h1>Domoljubni informativni portal</h1>
+			<img src="{{ url_for('static', filename='images/protislovjeLong.svg') }}" alt="">
+			<!-- <h1>Domoljubni informativni portal</h1> -->
 			<!-- <img src="protislovjeText.svg" alt="" style="height: 65vh;""> -->
 		</header>
 		<div class="navbar-container">
