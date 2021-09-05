@@ -5,7 +5,8 @@ body, html {
 }
 
 body {
-	background-color: #cecece;
+	/* background-color: #cecece; #cecece; */
+	background-color: #1e212c;
 	background-size: 200%;
 }
 
@@ -33,14 +34,14 @@ header, .navbar-container, footer {
 header {
 	grid-area: h;
 	text-align: center;
-	background-color: #3e4867ff;
+	background-color: #3c4153;
 	/* background-image: url("protislovjeText.svg"); */
 	background-size: 45vh;
 	/* not perfectly scalable! - to be fixed */
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	border-bottom: 0.5ch solid;
-	border-top: 0.5ch solid;
+	/* border-top: 0.5ch solid; */
 	border-color: #56638e;
 	display: flex;
 	justify-content: space-evenly;
@@ -114,18 +115,27 @@ section {
 	padding-top: 2.5%;
 	display: flex;
 	flex-wrap: wrap;
+	gap: 2%;
 }
 
 article {
-	max-width: 46%;
-	margin-left: 2.5%;
-	margin-bottom: 2.5%;
-	max-height: 15em;
-	padding: 1em;
-	overflow: auto;
+	max-width: 49%;
+	margin-bottom: 2%;
+	/* max-height: 20em; --- could be a better option than clamp() function*/
+	height: clamp(5em, max-content, 20em);
+	border: 1em solid #3e4867ff;
+	overflow: hidden;
 	text-align: justify;
 	background-color: #3e4867ff;
 	color: aliceblue;
+}
+
+.full-size-article {
+	max-width: 100%;
+}
+
+.full-size-article h2 {
+	text-align: center;
 }
 
 footer {
@@ -142,13 +152,12 @@ div.section-container {
 	margin-right: auto;
 	margin-left: auto;
 	width: 60%;
-	background-color: rgba(255, 255, 255, 0.836);
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 800px) {
 	article {
 		max-width: 100%;
-		margin: 0 3.5% 3.5% 3.5%
+		margin: 0 3.5% 3.5% 3.5%;
 	}
 	section {
 		width: 100%;
