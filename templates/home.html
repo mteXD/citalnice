@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="full-size-article">
+	<h2>Zakaj to pa to</h2>
+	<hr>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, aut quidem nam ipsam
+		repellendus
+		accusamus
+		autem quisquam cupiditate qui veniam. Minus iste voluptate dignissimos aliquid perferendis natus
+		quia
+		sequi
+		nam.
+	</p>
+</article>
+{% for x in range(10) %}
+<article>
+	<h2>{{ x }}</h2>
+	<hr>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam necessitatibus quos numquam
+		voluptas unde distinctio.
+	</p>
+</article>
+{% endfor %}
+{% endblock content %}
