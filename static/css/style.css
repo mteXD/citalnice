@@ -67,16 +67,14 @@ header {
 	color: whitesmoke;
 	align-items: center;
 	justify-content: center;
-}
-#responsive-nav{
-	background-color: #3e4867ff;
+	font-size: 1em;
 }
 
 .navbar-container {
 	grid-area: n;
 	position: sticky;
 	top: 0;
-	background-color: #3e4867ff;
+	background-color: #3e4867;
 	border-bottom: 0.25em solid #56638e;
 }
 
@@ -96,7 +94,7 @@ header {
 	padding: 1em 1em;
 	max-width: 20%;
 	max-height: 4em;
-	background-color: #3e4867ff;
+	background-color: #3e4867;
 	transition: 0.3s;
 }
 
@@ -124,9 +122,9 @@ article {
 	margin-bottom: 2%;
 	/* max-height: 20em; --- could be a better option than clamp() function*/
 	height: clamp(5em, max-content, 20em);
-	border: 1em solid #3e4867ff;
+	border: 1em solid #3e4867;
 	text-align: justify;
-	background-color: #3e4867ff;
+	background-color: #3e4867;
 }
 
 .full-size-article {
@@ -136,7 +134,7 @@ article {
 footer {
 	padding: 0.5em;
 	grid-area: f;
-	background-color: #3e4867ff;
+	background-color: #3e4867;
 	border-top: 0.25em solid #56638e;
 }
 
@@ -163,7 +161,7 @@ footer {
 		z-index: 1;
 		top: 0;
 		left: 0;
-		background-color: #111;
+		background-color: #1e212c;
 		overflow-x: hidden;
 		transition: 0.4s;
 		text-align: center;
@@ -172,7 +170,7 @@ footer {
 		display: initial;
 	}
 	#closebtn{
-		display: flex;
+		display: block;
 	}
 	header{
 		justify-content: space-around;
@@ -181,11 +179,10 @@ footer {
 		display:block;
 	}
 	.navbar-container li {
-		display: block;
 		padding: 1em 1em;
-		max-width: 20%;
-		max-height: 4em;
-		background-color: #3e4867ff;
+		max-width: 100%;
+		max-height: 6em;
+		background-color: #1e212c;
 		transition: 0.3s;
 	}
 }
