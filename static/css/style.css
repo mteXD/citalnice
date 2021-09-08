@@ -61,7 +61,7 @@ header {
 	cursor: pointer;
 }
 
-#closebtn{
+#closebtn {
 	display: none;
 	cursor: pointer;
 	color: whitesmoke;
@@ -98,9 +98,20 @@ header {
 	transition: 0.3s;
 }
 
+.navbar-container a, .navbar-container a:link, .navbar-container a:visited {
+	text-decoration: none;
+	color: whitesmoke;
+}
+
 .navbar-container li:hover {
 	background-color: #56638e;
 }
+
+.navbar-container a:active {
+	text-decoration: none;
+}
+
+
 
 h2 {
 	text-align: left;
@@ -166,17 +177,17 @@ footer {
 		transition: 0.4s;
 		text-align: center;
 	}
-	#lines{
+	#lines {
 		display: initial;
 	}
-	#closebtn{
+	#closebtn {
 		display: block;
 	}
-	header{
+	header {
 		justify-content: space-around;
 	}
 	.navbar-container ul {
-		display:block;
+		display: block;
 	}
 	.navbar-container li {
 		padding: 1em 1em;
