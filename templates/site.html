@@ -6,7 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/display.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 	<link rel="icon" href="{{ url_for('static', filename='images/protislovjeSmall.svg') }}">
 
 	<style>
@@ -20,16 +22,14 @@
 </head>
 
 <body>
-	<div class="container">
 		<header>
-			<!-- <section></section> -->
 			<img src="{{ url_for('static', filename='images/protislovjeLong.svg') }}" alt="">
-			<!-- <h1>Domoljubni informativni portal</h1> -->
-			<!-- <img src="protislovjeText.svg" alt="" style="height: 65vh;""> -->
+			<span id="lines" onclick="openNav()">&#9776;</span>
 		</header>
-		<div class="navbar-container">
-			<nav>
-				<ul>
+		<div class="navbar-container" id="responsive-nav">
+			<nav class="container-narrow">
+				<ul class="flex-container">
+					<li id="closebtn" onclick="closeNav()">&times;</li>
 					<li>Politična izobrazba</li>
 					<li>Slovenska zgodovina</li>
 					<li>Slovenska politična sfera</li>
@@ -38,8 +38,8 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="section-container">
-			<section>
+		<div class="section-container container-narrow">
+			<section class="flex-container">
 				<article class="full-size-article">
 					<h2>Zakaj to pa to</h2>
 					<hr>
@@ -55,10 +55,11 @@
 				</article>
 				{% for x in range(10) %}
 				<article>
-					<h2>Zakaj to pa to</h2>
+					<h2>{{ x }}</h2>
 					<hr>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam necessitatibus quos numquam voluptas unde distinctio.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam necessitatibus quos numquam
+						voluptas unde distinctio.
 					</p>
 				</article>
 				{% endfor %}
@@ -67,6 +68,7 @@
 		<footer>LICENCE</footer>
 	</div>
 
+	<script src="{{ url_for('static', filename='js/animation.js') }}"></script>
 </body>
 
 </html>
