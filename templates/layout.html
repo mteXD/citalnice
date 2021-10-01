@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/display.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<link rel="icon" href="{{ url_for('static', filename='images/protislovjeSmall.svg') }}">
+
+	<style>
+		@font-face {
+			font-family: Subtitle-font;
+			src: url("SalmaAlfasans-Light.otf");
+		}
+	</style>
+
+	<title>Čitalnice</title>
+</head>
+
+<body>
+		<header>
+			<img src="{{ url_for('static', filename='images/protislovjeLong.svg') }}" alt="">
+			<span id="lines" onclick="openNav()">&#9776;</span>
+		</header>
+		<div class="navbar-container" id="responsive-nav">
+			<nav class="container-narrow">
+				<ul class="flex-container">
+					<li id="closebtn" onclick="closeNav()">&times;</li>
+					<a href="{{ url_for('about') }}">Politična izobrazba</a>
+					<a href="{{ url_for('about') }}">Slovenska zgodovina</a>
+					<a href="{{ url_for('about') }}">Slovenska politična sfera</a>
+					<a href="{{ url_for('about') }}">Kdo bo koga?</a>
+					<a href="{{ url_for('about') }}">Kokodajs Veliki jr.</a>
+				</ul>
+			</nav>
+		</div>
+		<div class="section-container container-narrow">
+			<section class="flex-container">
+				{% block content %} {% endblock %}
+			</section>
+		</div>
+		<footer>LICENCE</footer>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/animation.js') }}"></script>
+</body>
+
+</html>
