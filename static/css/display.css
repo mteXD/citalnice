@@ -18,4 +18,6 @@
 	margin-left: auto;
 }
 
-
+.full-size-article {
+	max-width: 100%;
+}

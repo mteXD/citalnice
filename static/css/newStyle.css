@@ -21,7 +21,6 @@ body {
 }
 
 header img {
-	/* height: clamp(5em, 13vh, 18vw); */
 	height: clamp(30px, 12vw, 6rem);
 }
 
@@ -30,7 +29,7 @@ header, .navbar-container, footer, article, .navbar-container li {
 	overflow: hidden;
 }
 
-header, footer, .navbar-container li, .full-size-article h2 {
+header, footer, .navbar-container a, .full-size-article h2 {
 	text-align: center;
 }
 
@@ -42,8 +41,6 @@ header {
 	padding: 1em 0;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	border-bottom: 0.25em solid;
-	border-color: #56638e;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -70,30 +67,6 @@ header {
 	margin-top: 0.5em;
 }
 
-.navbar-container {
-	grid-area: n;
-	position: sticky;
-	top: 0;
-	background-color: #3e4867;
-	border-bottom: 0.25em solid #56638e;
-}
-
-.navbar-container ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-}
-
-.navbar-container li {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-basis: 25%;
-	flex-grow: 0;
-	max-width: auto;
-	max-height: max-content;
-}
 
 .navbar-container a, .navbar-container a:link, .navbar-container a:visited {
 	text-decoration: none;
@@ -102,18 +75,38 @@ header {
 
 .navbar-container a:hover {
 	background-color: #56638e;
+	text-decoration: underline;
 }
 
 .navbar-container a:active {
 	text-decoration: none;
 }
 
-.navbar-container a, #closebtn1{
+#closebtn1{
+	display: none;
 	height: 100%;
 	width: 100%;
 	padding: 1em 1em;
 	transition: 0.3s;
 	background-color: #3e4867;
+}
+
+.navbar-container {
+	background-color: #3c4153;
+}
+
+.navbar-container a{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	/* height: 100%; */
+	width: 100%;
+	padding: 1em 1em;
+	transition: 0.3s;
+	background-color: #3c4153;	
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 h2 {
@@ -134,22 +127,15 @@ section {
 article {
 	max-width: 49%;
 	margin-bottom: 2%;
-	/* max-height: 20em; --- could be a better option than clamp() function*/
-	height: clamp(5em, max-content, 20em);
 	border: 1em solid #3e4867;
 	text-align: justify;
 	background-color: #3e4867;
-}
-
-.full-size-article {
-	max-width: 100%;
 }
 
 footer {
 	padding: 0.5em;
 	grid-area: f;
 	background-color: #3e4867;
-	border-top: 0.25em solid #56638e;
 }
 
 .section-container {

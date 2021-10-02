@@ -30,7 +30,7 @@ header, .navbar-container, footer, article, .navbar-container li {
 	overflow: hidden;
 }
 
-header, footer, .navbar-container li, .full-size-article h2 {
+header, footer, .navbar-container li, .full-size-article h2, .navbar-container a {
 	text-align: center;
 }
 
@@ -85,6 +85,16 @@ header {
 	display: flex;
 }
 
+.navbar-container a {
+	display: list-item;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 25%;
+	flex-grow: 0;
+	max-width: auto;
+	max-height: max-content;
+}
+
 .navbar-container li {
 	display: flex;
 	align-items: center;
@@ -100,15 +110,15 @@ header {
 	color: whitesmoke;
 }
 
-.navbar-container a:hover {
+.navbar-container li:hover {
 	background-color: #56638e;
 }
 
-.navbar-container a:active {
+.navbar-container li:active {
 	text-decoration: none;
 }
 
-.navbar-container a, #closebtn1{
+.navbar-container li, #closebtn1{
 	height: 100%;
 	width: 100%;
 	padding: 1em 1em;
@@ -146,8 +156,8 @@ article {
 }
 
 footer {
-	padding: 0.5em;
 	grid-area: f;
+	padding: 0.5em;	
 	background-color: #3e4867;
 	border-top: 0.25em solid #56638e;
 }
