@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/display.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/newStyle.css') }}">
 
 	<link rel="icon" href="{{ url_for('static', filename='images/protislovjeSmall.svg') }}">
 
@@ -27,15 +27,13 @@
 			<span id="lines" onclick="openNav()">&#9776;</span>
 		</header>
 		<div class="navbar-container" id="responsive-nav">
-			<nav class="container-narrow">
-				<ul class="flex-container">
-					<li id="closebtn" onclick="closeNav()">&times;</li>
-					<a href="{{ url_for('about') }}">Politična izobrazba</a>
+			<nav class="container-narrow flex-container">
+					<a href="{{ url_for('home') }}">Politična izobrazba</a>
 					<a href="{{ url_for('about') }}">Slovenska zgodovina</a>
 					<a href="{{ url_for('about') }}">Slovenska politična sfera</a>
 					<a href="{{ url_for('about') }}">Kdo bo koga?</a>
 					<a href="{{ url_for('about') }}">Kokodajs Veliki jr.</a>
-				</ul>
+					<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
 			</nav>
 		</div>
 		<div class="section-container container-narrow">

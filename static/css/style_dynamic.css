@@ -4,58 +4,47 @@ body, html {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
-	/* background-color: #cecece; #cecece; */
+	display: grid;
+	grid-template-areas: 'h' 'n' 'a' 'f';
+	grid-template-rows: clamp(5rem, 20vw, 8rem) max-content auto max-content;
+	min-height: 100vh;
+	height: auto;
 	background-color: #1e212c;
 	background-size: 200%;
 	color: whitesmoke;
 }
 
-* {
-	box-sizing: border-box;
-}
-
-.container {
-	display: grid;
-	grid-template-areas: 'h' 'n' 'a' 'f';
-	grid-template-rows: 18vh max-content auto max-content;
-	min-height: 100vh;
-	height: auto;
-}
-
 header img {
-	height: clamp(1vh, 13vh, 18vw);
+	height: clamp(30px, 12vw, 6rem);
 }
 
-header, .navbar-container, footer {
+header, .navbar-container, footer, article, .navbar-container li {
 	word-break: keep-all;
 	overflow: hidden;
 }
 
+header, footer, .navbar-container li, .full-size-article h2 {
+	text-align: center;
+}
+
 header {
 	grid-area: h;
-	text-align: center;
 	background-color: #3c4153;
-	/* background-image: url("protislovjeText.svg"); */
 	background-size: 45vh;
 	/* not perfectly scalable! - to be fixed */
+	padding: 1em 0;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	border-bottom: 0.5ch solid;
-	/* border-top: 0.5ch solid; */
+	border-bottom: 0.25em solid;
 	border-color: #56638e;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	flex-direction: column;
-}
-
-.navbar-container {
-	grid-area: n;
-	position: sticky;
-	top: 0;
-	background-color: #3e4867ff;
-	border-bottom: 0.5ch solid #56638e;
 }
 
 /* @media only screen and (max-width: 1283px) {
@@ -64,10 +53,27 @@ header {
 	}
 } */
 
-.navbar-container nav {
-	margin-right: auto;
-	margin-left: auto;
-	width: 60%;
+#lines {
+	display: none;
+	font-size: clamp(25px, 10vw, 50px);
+	cursor: pointer;
+}
+
+#closebtn{
+	display: none;
+	cursor: pointer;
+	color: whitesmoke;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+}
+
+.navbar-container {
+	grid-area: n;
+	position: sticky;
+	top: 0;
+	background-color: #3e4867;
+	border-bottom: 0.25em solid #56638e;
 }
 
 .navbar-container ul {
@@ -86,10 +92,8 @@ header {
 	padding: 1em 1em;
 	max-width: 20%;
 	max-height: 4em;
-	text-align: center;
-	background-color: #3e4867ff;
+	background-color: #3e4867;
 	transition: 0.3s;
-	overflow: hidden;
 }
 
 .navbar-container li:hover {
@@ -101,14 +105,13 @@ h2 {
 	margin: 0;
 }
 
-hr{
+hr {
 	color: white;
 }
 
 section {
-	padding-top: 2.5%;
-	display: flex;
 	flex-wrap: wrap;
+	padding-top: 2.5%;
 	gap: 2%;
 }
 
@@ -117,33 +120,24 @@ article {
 	margin-bottom: 2%;
 	/* max-height: 20em; --- could be a better option than clamp() function*/
 	height: clamp(5em, max-content, 20em);
-	border: 1em solid #3e4867ff;
-	overflow: hidden;
+	border: 1em solid #3e4867;
 	text-align: justify;
-	background-color: #3e4867ff;
+	background-color: #3e4867;
 }
 
 .full-size-article {
 	max-width: 100%;
 }
 
-.full-size-article h2 {
-	text-align: center;
-}
-
 footer {
 	padding: 0.5em;
 	grid-area: f;
-	text-align: center;
-	background-color: #3e4867ff;
-	border-top: 0.5ch solid #56638e;
+	background-color: #3e4867;
+	border-top: 0.25em solid #56638e;
 }
 
-div.section-container {
+.section-container {
 	grid-area: a;
-	margin-right: auto;
-	margin-left: auto;
-	width: 60%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -151,14 +145,42 @@ div.section-container {
 		max-width: 100%;
 		margin: 0 3.5% 3.5% 3.5%;
 	}
-	section {
+	div.section-container, .navbar-container nav, section {
 		width: 100%;
+	}
+	section {
 		padding-top: 3.5%;
 	}
-	div.section-container {
+	.navbar-container {
+		display: initial;
+		height: 0;
 		width: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #1e212c;
+		overflow-x: hidden;
+		transition: 0.4s;
+		text-align: center;
 	}
-	.navbar-container nav {
-		width: 100%;
+	#lines{
+		display: initial;
+	}
+	#closebtn{
+		display: block;
+	}
+	header{
+		justify-content: space-around;
+	}
+	.navbar-container ul {
+		display:block;
+	}
+	.navbar-container li {
+		padding: 1em 1em;
+		max-width: 100%;
+		max-height: 6em;
+		background-color: #1e212c;
+		transition: 0.3s;
 	}
 }

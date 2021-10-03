@@ -18,4 +18,21 @@
 	margin-left: auto;
 }
 
+.full-size-article {
+	max-width: 100%;
+}
 
+/*              ~ ~ ~ COLORS ~ ~ ~             */
+/* Original Palette: #1e212c, #3c4153, #3e4867 */
+
+body {
+	background-color: #1e212c;
+}
+
+.navbar-container, .navbar-container a, header {
+	background-color: #3c4153;
+}
+
+article, footer {
+	background-color: #3e4867;
+}

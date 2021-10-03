@@ -14,47 +14,34 @@ body {
 	grid-template-rows: clamp(5rem, 20vw, 8rem) max-content auto max-content;
 	min-height: 100vh;
 	height: auto;
-	/*  */
-	background-color: #1e212c;
 	background-size: 200%;
 	color: whitesmoke;
 }
 
 header img {
-	/* height: clamp(5em, 13vh, 18vw); */
 	height: clamp(30px, 12vw, 6rem);
 }
 
-header, .navbar-container, footer, article, .navbar-container a{
+header, .navbar-container, footer, article, .navbar-container li {
 	word-break: keep-all;
 	overflow: hidden;
 }
 
-/* No ".navbar-container li" anymore, change & commit & push */
-header, footer, .navbar-container li, .full-size-article h2, .navbar-container a {
+header, footer, .navbar-container a, .full-size-article h2 {
 	text-align: center;
 }
 
 header {
 	grid-area: h;
-	background-color: #3c4153;
 	background-size: 45vh;
 	/* not perfectly scalable! - to be fixed */
 	padding: 1em 0;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	border-bottom: 0.25em solid;
-	border-color: #56638e;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 }
-
-/* @media only screen and (max-width: 1283px) {
-	.navbar-container {
-		display: block;
-	}
-} */
 
 #lines {
 	display: none;
@@ -66,51 +53,8 @@ header {
 	display: none;
 	cursor: pointer;
 	color: whitesmoke;
-	align-items: center;
-	justify-content: center;
-	margin-top: 0.5em;
 }
 
-.navbar-container {
-	grid-area: n;
-	position: sticky;
-	top: 0;
-	background-color: #3e4867;
-	border-bottom: 0.25em solid #56638e;
-}
-
-.navbar-container a {
-	display: list-item;
-	text-decoration: none;
-	color: whitesmoke;
-}
-
-.navbar-container ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-}
-
-.navbar-container a {
-	display: list-item;
-	align-items: center;
-	justify-content: center;
-	flex-basis: 25%;
-	flex-grow: 0;
-	max-width: auto;
-	max-height: max-content;
-}
-
-.navbar-container li {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-basis: 25%;
-	flex-grow: 0;
-	max-width: auto;
-	max-height: max-content;
-}
 
 .navbar-container a, .navbar-container a:link, .navbar-container a:visited {
 	text-decoration: none;
@@ -121,16 +65,21 @@ header {
 	background-color: #56638e;
 }
 
-.navbar-container li:active {
+.navbar-container a:active {
 	text-decoration: none;
 }
 
-.navbar-container li, #closebtn1{
-	height: 100%;
+.navbar-container a{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	/* height: 100%; */
 	width: 100%;
 	padding: 1em 1em;
 	transition: 0.3s;
-	background-color: #3e4867;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 h2 {
@@ -139,7 +88,7 @@ h2 {
 }
 
 hr {
-	color: white;
+	color: whitesmoke;
 }
 
 section {
@@ -151,22 +100,13 @@ section {
 article {
 	max-width: 49%;
 	margin-bottom: 2%;
-	/* max-height: 20em; --- could be a better option than clamp() function*/
-	height: clamp(5em, max-content, 20em);
 	border: 1em solid #3e4867;
 	text-align: justify;
-	background-color: #3e4867;
-}
-
-.full-size-article {
-	max-width: 100%;
 }
 
 footer {
+	padding: 0.5em;
 	grid-area: f;
-	padding: 0.5em;	
-	background-color: #3e4867;
-	border-top: 0.25em solid #56638e;
 }
 
 .section-container {
@@ -185,7 +125,7 @@ footer {
 		padding-top: 3.5%;
 	}
 	.navbar-container {
-		display: initial;
+		display: block;
 		height: 0;
 		width: 100%;
 		position: fixed;
@@ -206,14 +146,16 @@ footer {
 	header {
 		justify-content: space-around;
 	}
-	.navbar-container ul {
+	.navbar-container a {
 		display: block;
-	}
-	.navbar-container li {
 		padding: 1em 2em;
 		max-width: 100%;
 		max-height: 6em;	
 		background-color: #1e212c;
 		transition: 0.3s;
+	}
+
+	.flex-container{
+		display: block;
 	}
 }
