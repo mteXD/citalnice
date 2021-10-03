@@ -14,8 +14,6 @@ body {
 	grid-template-rows: clamp(5rem, 20vw, 8rem) max-content auto max-content;
 	min-height: 100vh;
 	height: auto;
-	/*  */
-	background-color: #1e212c;
 	background-size: 200%;
 	color: whitesmoke;
 }
@@ -35,7 +33,6 @@ header, footer, .navbar-container a, .full-size-article h2 {
 
 header {
 	grid-area: h;
-	background-color: #3c4153;
 	background-size: 45vh;
 	/* not perfectly scalable! - to be fixed */
 	padding: 1em 0;
@@ -45,12 +42,6 @@ header {
 	justify-content: space-evenly;
 	align-items: center;
 }
-
-/* @media only screen and (max-width: 1283px) {
-	.navbar-container {
-		display: block;
-	}
-} */
 
 #lines {
 	display: none;
@@ -62,9 +53,6 @@ header {
 	display: none;
 	cursor: pointer;
 	color: whitesmoke;
-	align-items: center;
-	justify-content: center;
-	margin-top: 0.5em;
 }
 
 
@@ -75,24 +63,10 @@ header {
 
 .navbar-container a:hover {
 	background-color: #56638e;
-	text-decoration: underline;
 }
 
 .navbar-container a:active {
 	text-decoration: none;
-}
-
-#closebtn1{
-	display: none;
-	height: 100%;
-	width: 100%;
-	padding: 1em 1em;
-	transition: 0.3s;
-	background-color: #3e4867;
-}
-
-.navbar-container {
-	background-color: #3c4153;
 }
 
 .navbar-container a{
@@ -104,7 +78,6 @@ header {
 	width: 100%;
 	padding: 1em 1em;
 	transition: 0.3s;
-	background-color: #3c4153;	
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -129,13 +102,11 @@ article {
 	margin-bottom: 2%;
 	border: 1em solid #3e4867;
 	text-align: justify;
-	background-color: #3e4867;
 }
 
 footer {
 	padding: 0.5em;
 	grid-area: f;
-	background-color: #3e4867;
 }
 
 .section-container {
@@ -154,7 +125,7 @@ footer {
 		padding-top: 3.5%;
 	}
 	.navbar-container {
-		display: initial;
+		display: block;
 		height: 0;
 		width: 100%;
 		position: fixed;
@@ -175,14 +146,16 @@ footer {
 	header {
 		justify-content: space-around;
 	}
-	.navbar-container ul {
+	.navbar-container a {
 		display: block;
-	}
-	.navbar-container li {
 		padding: 1em 2em;
 		max-width: 100%;
 		max-height: 6em;	
 		background-color: #1e212c;
 		transition: 0.3s;
+	}
+
+	.flex-container{
+		display: block;
 	}
 }
