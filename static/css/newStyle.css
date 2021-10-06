@@ -55,18 +55,8 @@ header {
 	color: whitesmoke;
 }
 
-
-.navbar-container a, .navbar-container a:link, .navbar-container a:visited {
-	text-decoration: none;
-	color: whitesmoke;
-}
-
-.navbar-container a:hover {
-	background-color: #56638e;
-}
-
-.navbar-container a:active {
-	text-decoration: none;
+nav {
+	height: 5em;
 }
 
 .navbar-container a{
@@ -74,12 +64,27 @@ header {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	/* height: 100%; */
 	width: 100%;
-	padding: 1em 1em;
+	padding: 1em 1em;	
+	border-bottom: 0em solid #bf9c0e;
 	transition: 0.3s;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+.navbar-container a, .navbar-container a:link, .navbar-container a:visited {
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.navbar-container a:hover {
+	/* box-sizing: border-box; */
+	background-color: #56638e;
+	border-bottom: 0.4em solid #bf9c0e;
+}
+
+.navbar-container a:active {
+	text-decoration: none;
 }
 
 h2 {
@@ -102,6 +107,11 @@ article {
 	margin-bottom: 2%;
 	border: 1em solid #3e4867;
 	text-align: justify;
+}
+
+article img{
+	width: 100%;
+	height: 100%;
 }
 
 footer {
@@ -136,6 +146,9 @@ footer {
 		overflow-x: hidden;
 		transition: 0.4s;
 		text-align: center;
+	}
+	.navbar-container a:hover {
+		border-bottom: 0em solid #bf9c0e;
 	}
 	#lines {
 		display: initial;

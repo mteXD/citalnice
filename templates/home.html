@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <article class="full-size-article">
-	<h2>Zakaj to pa to</h2>
+	<h2>Čitalnice</h2>
 	<hr>
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, aut quidem nam ipsam
@@ -13,7 +13,21 @@
 		nam.
 	</p>
 </article>
-{% for x in range(10) %}
+
+<article>
+	<h2>Ustavna demokracija</h2>
+	<hr>
+	<p>
+		Kako naj bi ustavna demokracija delovala in kaj so njena načela? Kdo v ustavni demokraciji zares vlada,
+		in kako zagotavljati napredek in razvoj države sočasno z zadovoljstvom državljanov?
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque odit, fugiat sint veniam iure
+		recusandae dolore nihil qui voluptate expedita inventore provident eius quae nostrum officiis culpa facilis,
+		doloribus reprehenderit repellendus laudantium vitae, suscipit aliquam aut. Nesciunt, corporis nihil provident
+		et facilis obcaecati dolorem eveniet, veritatis voluptates autem quisquam.
+	</p>
+</article>
+
+{% for x in range(1, 10) %}
 <article>
 	<h2>{{ x }}</h2>
 	<hr>
