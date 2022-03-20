@@ -12,6 +12,11 @@
 	align-items: center;
 }
 
+.flex-between{
+	justify-content: center;
+	align-items: center;
+}
+
 .container-narrow {
 	width: 60%;
 	margin-right: auto;
@@ -35,4 +40,10 @@ body {
 
 article, footer {
 	background-color: #3e4867;
+}
+
+@media only screen and (max-width: 800px) {
+	.container-narrow {
+		width: 90%;
+	}
 }

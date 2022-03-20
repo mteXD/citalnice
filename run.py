@@ -14,9 +14,13 @@ def about():
 def izobrazba():
 	return render_template('izobrazba.html')
 
-@app.route("/PoliticnaSfera")
-def sfera():
-	return render_template('sfera.html')
+@app.route("/vestniki")
+def vestniki():
+	return render_template('vestniki.html')
+
+@app.route("/zgodovina")
+def zgodovina():
+	return render_template('zgodovina.html')
 
 if __name__ == "__main__":
 	app.run(debug=True)

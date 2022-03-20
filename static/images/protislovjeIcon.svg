@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1050mm"
+   width="210.513mm"
    height="200mm"
-   viewBox="0 0 1050 200"
+   viewBox="0 0 210.513 200"
    version="1.1"
    id="svg5"
-   sodipodi:docname="protislovjeLong.svg"
+   sodipodi:docname="protislovjeLongIcon.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    inkscape:export-filename="D:\Matic\Pictures\Vector Graphics\protislovje main2.png"
    inkscape:export-xdpi="269.01404"
@@ -28,9 +28,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      width="1000mm"
-     inkscape:zoom="0.3535534"
-     inkscape:cx="2190.6167"
-     inkscape:cy="202.23253"
+     inkscape:zoom="0.50000001"
+     inkscape:cx="780.99998"
+     inkscape:cy="372.99999"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -149,19 +149,6 @@
          offset="0"
          id="stop31160" />
     </linearGradient>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter69252"
-       x="-0.0055914674"
-       y="-0.050202319"
-       width="1.0111829"
-       height="1.1004046">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.40342906"
-         id="feGaussianBlur69254" />
-    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient43311"
@@ -250,47 +237,10 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="text 2"
-     style="display:inline">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.6368px;line-height:1.25;font-family:'Rialto NF';-inkscape-font-specification:'Rialto NF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:3.96876px;display:inline;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565917;filter:url(#filter69252)"
-       x="100.07076"
-       y="111.87486"
-       id="text69197"
-       transform="matrix(4.6266989,0,0,4.5996775,175.89141,-417.32541)"><tspan
-         sodipodi:role="line"
-         id="tspan69195"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.6368px;font-family:'Rialto NF';-inkscape-font-specification:'Rialto NF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.565917"
-         x="102.05515"
-         y="111.87486">ČITALNICE</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.7803px;line-height:1.25;font-family:'Rialto NF';-inkscape-font-specification:'Rialto NF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.36141"
-       x="634.53992"
-       y="170.33734"
-       id="text25175-9"><tspan
-         sodipodi:role="line"
-         id="tspan25173-4"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.7803px;font-family:'Salma Alfasans';-inkscape-font-specification:'Salma Alfasans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:2.36141"
-         x="634.53992"
-         y="170.33734">Domoljubni vir informacij</tspan></text>
-  </g>
+     style="display:inline" />
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="text"
-     style="display:inline">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:105.138px;line-height:1.25;font-family:'Rialto NF';-inkscape-font-specification:'Rialto NF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:18.4332px;display:inline;fill:#bf9c0e;fill-opacity:1;stroke:none;stroke-width:2.62846"
-       x="636.25891"
-       y="98.405449"
-       id="text25175"
-       transform="matrix(1.0223317,0,0,1.0223317,-11.57894,-2.1641256)"><tspan
-         sodipodi:role="line"
-         id="tspan25173"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:105.138px;font-family:'Rialto NF';-inkscape-font-specification:'Rialto NF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#bf9c0e;stroke-width:2.62846;fill-opacity:1"
-         x="645.47552"
-         y="98.405449">ČITALNICE</tspan></text>
-  </g>
+     style="display:inline" />
 </svg>
