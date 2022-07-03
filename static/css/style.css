@@ -27,7 +27,7 @@ header, footer, article {
 	overflow: hidden;
 }
 
-footer, .navbar-container a, .full-size-article h2 {
+footer, nav a, .full-size-article h2 {
 	text-align: center;
 }
 
@@ -63,7 +63,7 @@ nav {
 	height: 5em;
 }
 
-.navbar-container a{
+nav a{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -77,18 +77,18 @@ nav {
 }
 
 /* tu je zatu de so lepu beli linki	 */
-.navbar-container a, .navbar-container a:link, .navbar-container a:visited {
+nav a, nav a:link, nav a:visited {
 	text-decoration: none;
 	color: whitesmoke;
 }
 
-.navbar-container a:hover {
+nav a:hover {
 	/* box-sizing: border-box; */
 	background-color: #56638e;
 	border-bottom: 0.4em solid #bf9c0e;
 }
 
-.navbar-container a:active {
+nav a:active {
 	text-decoration: none;
 }
 
@@ -140,13 +140,13 @@ footer {
 		max-width: 100%;
 		margin: 0 3.5% 3.5% 3.5%;
 	}
-	div.section-container, .navbar-container nav, section {
+	div.section-container, nav, section {
 		width: 100%;
 	}
 	section {
 		padding-top: 3.5%;
 	}
-	.navbar-container {
+	#responsive-nav {
 		display: block;
 		height: 0;
 		width: 100%;
@@ -159,7 +159,7 @@ footer {
 		transition: 0.4s;
 		text-align: center;
 	}
-	.navbar-container a:hover {
+	nav a:hover {
 		border-bottom: 0em solid #bf9c0e;
 	}
 	#lines {
@@ -171,7 +171,7 @@ footer {
 	header {
 		justify-content: space-around;
 	}
-	.navbar-container a {
+	nav a {
 		display: block;
 		padding: 1em 2em;
 		max-width: 100%;

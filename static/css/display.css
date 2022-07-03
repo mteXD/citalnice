@@ -34,7 +34,7 @@ body {
 	background-color: #1e212c;
 }
 
-.navbar-container, .navbar-container a, header {
+#responsive-nav, header {
 	background-color: #3c4153;
 }
 
