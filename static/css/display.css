@@ -47,3 +47,11 @@ article, footer {
 		width: 90%;
 	}
 }
+
+.shown {
+	height: 5em;
+}
+.hidden {
+	height: 0%;
+
+}

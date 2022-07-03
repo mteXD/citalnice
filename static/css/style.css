@@ -129,11 +129,12 @@ footer {
 	min-height: 71vh;
 }
 
-@media only screen and (min-width: 801px) {
+/*@media only screen and (min-width: 801px) {
 	#responsive-nav {
 		height: 100%;
+		background-color: #3c4153;
 	}
-}
+}*/
 
 @media only screen and (max-width: 800px) {
 	article {
@@ -147,8 +148,6 @@ footer {
 		padding-top: 3.5%;
 	}
 	#responsive-nav {
-		display: block;
-		height: 0;
 		width: 100%;
 		position: fixed;
 		z-index: 1;
