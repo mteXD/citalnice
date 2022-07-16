@@ -6,50 +6,61 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/display.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 	<link rel="icon" href="{{ url_for('static', filename='images/protislovjeSmall.svg') }}">
 
-	<style>
+	<!-- <style>
 		@font-face {
 			font-family: Subtitle-font;
 			src: url("SalmaAlfasans-Light.otf");
 		}
-	</style>
+	</style> -->
 
 	<title>Čitalnice</title>
 </head>
 
 <body>
 	<header>
-		<div class="container-narrow logo-container">
+		<div id="top-of-header" class="container-narrow flex-container-space-between">
 			<!-- <img src="{{ url_for('static', filename='images/protislovjeIcon.svg') }}" alt=""> -->
 			<img id="text-heading" src="{{ url_for('static', filename='images/protislovjeText.svg') }}" alt="">
 			<!-- Veritatis simplex oratio est -->
 			<span id="lines" onclick="openNav()">&#9776;</span>
 		</div>
+		<hr class="container-narrow">
+		<nav class="container-narrow flex-container-space-evenly">
+			<a href="{{ url_for('vestniki') }}"><span>Vestniki</span></a>
+			<a href="{{ url_for('zgodovina') }}"><span>Slovenska zgodovina</span></a>
+			<a href="{{ url_for('home') }}"><span>Politična izobrazba</span></a>
+			<a href="{{ url_for('about') }}"><span>Kdo bo koga?</span></a>
+			<a href="{{ url_for('about') }}"><span>Kokodajs Veliki jr.</span></a>
+			<!-- <a href="javascript:void(0)" id="closebtn" onclick="closeNav()"><span>&times;</span></a> -->
+		</nav>
 	</header>
-		<!-- <div class="navbar-container" id="responsive-nav"> -->
-			<nav class="container-narrow flex-container">
+
+	<section class="container-narrow flex-container-space-around">
+		{% block content %} {% endblock %}
+	</section>
+
+	<footer>
+		<div id="footer-container" class="container-narrow flex-container-space-around">
+			<div class="footer-element">
+				<h3>SKLOPI</h3>
+				<hr>
 				<a href="{{ url_for('vestniki') }}">Vestniki</a>
 				<a href="{{ url_for('zgodovina') }}">Slovenska zgodovina</a>
 				<a href="{{ url_for('home') }}">Politična izobrazba</a>
-				<!-- <a href="{{ url_for('about') }}">Kdo bo koga?</a>
-				<a href="{{ url_for('about') }}">Kokodajs Veliki jr.</a> -->
-				<a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
-			</nav>
-		<!-- </div> -->
-
-	<div class="section-container container-narrow">
-		<section class="flex-container">
-			{% block content %} {% endblock %}
-		</section>
-	</div>
-	<footer>
-		<div>LICENCE</div>
-		<div>Vse pravice pridržane</div>
-		<div><a href="{{ url_for('about') }}">O nas</a></div>
+				<a href="{{ url_for('about') }}">Kdo bo koga?</a>
+				<a href="{{ url_for('about') }}">Kokodajs Veliki jr.</a>
+			</div>
+			<div class="footer-element">
+				<h3>LICENCE</h3>
+				<hr>
+				<div><a href="{{ url_for('about') }}">O nas</a></div>
+			</div>
+		</div>
 	</footer>
 
 	<script src="{{ url_for('static', filename='js/animation.js') }}"></script>

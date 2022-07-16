@@ -1,189 +1,135 @@
-body, html {
-	margin: 0px;
-	padding: 0px;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 * {
 	box-sizing: border-box;
+	color: whitesmoke;
+	margin: 0px;
+	padding: 0px;
 }
 
 body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	display: grid;
-	grid-template-areas: 'h' 'n' 'a' 'f';
-	grid-template-rows: clamp(5rem, 20vw, 8rem) max-content auto max-content;
+	grid-template-areas: 'h' 'a' 'f';
+	grid-template-rows: max-content auto max-content; 
 	min-height: 100vh;
-	height: auto;
-	background-size: 200%;
-	color: whitesmoke;
+	/* height: auto; */
+	background-color: #1e212c;
 }
 
-header img {
-	height: clamp(30px, 12vw, 6rem);
+a {
+	text-decoration: none;
 }
 
-header, footer, article {
+hr {
+	margin-bottom: 1em;
+}
+
+header, section, footer {
 	word-break: keep-all;
 	overflow: hidden;
 }
 
-footer, nav a, .full-size-article h2 {
-	text-align: center;
+header, footer {
+	background-color: #3c4153; 
 }
 
 header {
 	grid-area: h;
-	background-size: 45vh;
-	/* not perfectly scalable! - to be fixed */
-	padding: 1em 0;
-	/* display: flex;
-	justify-content: space-between;
-	align-items: center; */
+	padding: 0 0.5em;
 }
 
-.logo-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#top-of-header {
+	margin-top: 2em;
+	margin-bottom: 1em;
 }
 
-#lines {
-	display: none;
-	font-size: clamp(25px, 10vw, 50px);
-	cursor: pointer;
-}
-
-#closebtn {
-	display: none;
-	cursor: pointer;
-	color: whitesmoke;
+header img {
+	/* height: clamp(30px, 12vw, 6rem); */
+	height: 6rem;
 }
 
 nav {
-	height: 5em;
+	/* margin-bottom: 1rem; */
+	/* position: sticky;
+	top: 0; */
+	flex-direction: row;
 }
 
-nav a{
+nav a {
+	/* box-sizing: content-box; */
+	flex-grow: 1;
+	min-height: 1em;
+	padding: 1.2em 1em 0.9em 1em;	
 	display: flex;
-	flex-direction: row;
 	align-items: center;
-	justify-content: center;
-	width: 100%;
-	padding: 1em 1em;	
-	border-bottom: 0em solid #bf9c0e;
+	border-bottom: 0.3em solid #bf9c0e00;
 	transition: 0.3s;
+}
+
+nav a:hover {
+	background-color: #56638e;
+	border-bottom: 0.3em solid #bf9c0eff;
+}
+
+nav span {
+	width: 100%;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-/* tu je zatu de so lepu beli linki	 */
-nav a, nav a:link, nav a:visited {
-	text-decoration: none;
-	color: whitesmoke;
-}
-
-nav a:hover {
-	/* box-sizing: border-box; */
-	background-color: #56638e;
-	border-bottom: 0.4em solid #bf9c0e;
-}
-
-nav a:active {
-	text-decoration: none;
-}
-
-h2 {
-	text-align: left;
-	margin: 0;
-}
-
-hr {
-	color: whitesmoke;
-}
-
 section {
+	grid-area: a;
 	flex-wrap: wrap;
-	padding-top: 2.5%;
-	gap: 2%;
+	margin: 0.5em 0;
 }
 
-article {
-	max-width: 49%;
-	margin-bottom: 2%;
-	border: 1em solid #3e4867;
-	text-align: justify;
-}
-
-article img{
-	width: 100%;
-	height: 100%;
-}
-
-footer {
-	padding: 0.5em;
+footer{
+	padding: 4em 0;
 	grid-area: f;
 }
 
-.section-container {
-	grid-area: a;
-	min-height: 71vh;
+article {
+	background-color: #3e4867;
+	width: 49%;
+	padding: 1em;
+	margin: 0.5% 0.5%;
 }
 
-/*@media only screen and (min-width: 801px) {
-	#responsive-nav {
-		height: 100%;
-		background-color: #3c4153;
-	}
-}*/
-
-@media only screen and (max-width: 800px) {
-	article {
-		max-width: 100%;
-		margin: 0 3.5% 3.5% 3.5%;
-	}
-	div.section-container, nav, section {
-		width: 100%;
-	}
-	section {
-		padding-top: 3.5%;
-	}
-	#responsive-nav {
-		width: 100%;
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		background-color: #1e212c;
-		overflow-x: hidden;
-		transition: 0.4s;
-		text-align: center;
-	}
-	nav a:hover {
-		border-bottom: 0em solid #bf9c0e;
-	}
-	#lines {
-		display: initial;
-	}
-	#closebtn {
-		display: block;
-	}
-	header {
-		justify-content: space-around;
-	}
-	nav a {
-		display: block;
-		padding: 1em 2em;
-		max-width: 100%;
-		max-height: 6em;	
-		background-color: #1e212c;
-		transition: 0.3s;
-	}
-
-	.flex-container{
-		display: block;
-	}
-
-	.logo-container {
-		justify-content: space-between;
-	}
+nav a, .full-size-article h2 {
+	text-align: center;
 }
+
+.footer-element {
+	min-width: 20%;
+	width: auto;
+}
+
+.footer-element * {
+	margin: 0.5em 0em;
+}
+
+.footer-element hr {
+	margin-bottom: 2em;
+}
+
+.footer-element a {
+	display: block;
+	color: #BBBBBB;
+	transition: 0.3s;
+}
+
+.footer-element a:hover {
+	color: #FFFFFF;
+}
+
+#lines {
+	font-size: 3em;
+}
+
+#footer-container {
+	gap: 4em;
+}
+
+/* background-color: #1e212c;
+border-bottom: 0em solid #bf9c0e;
+border: 1em solid #3e4867; 
+#56638e;*/
